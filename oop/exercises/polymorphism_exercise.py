@@ -56,69 +56,19 @@ class Triangle(Shape):
         return self.side1 + self.side2 + self.side3
 
 
-class Circle(Shape):
-    def __init__(self, name, radius):
-        super().__init__(name)
-        self.radius = radius
+# TODO: create a new class called Circle that inherits from Shape
 
-    def area(self):
-        return 3.14 * self.radius ** 2
+# TODO: create a new class called Pentagon that inherits from Shape
 
-    def perimeter(self):
-        # circumference
-        return 2 * 3.14 * self.radius
-
-
-class Pentagon(Shape):
-    def __init__(self, name, side):
-        super().__init__(name)
-        self.side = side
-
-    def area(self):
-        # compute the area of the pentagon using Heron's formula
-        return 1.72 * self.side ** 2
-
-    def perimeter(self):
-        return self.side * 5
+# TODO: create a new class called ShapeCollection that stores shapes in a list
+# Add the following attributes:
+# - shapes: a list of shapes
+# Add the following methods:
+# - add_shape(shape): adds a shape to the collection
+# - remove_shape(shape): removes a shape from the collection
+# - total_perimeter(): returns the total perimeter of all shapes in the collection
+# - display_shapes_info(): displays information about each shape in the collection
 
 
 class ShapeCollection:
-    def __init__(self):
-        self.shapes = []
-
-    def add_shape(self, shape):
-        self.shapes.append(shape)
-
-    def remove_shape(self, shape):
-        self.shapes.remove(shape)
-
-    def total_perimeter(self):
-        total = 0
-        for shape in self.shapes:
-            total += shape.perimeter()
-        return total
-
-    def display_shapes_info(self):
-        for shape in self.shapes:
-            print(shape)
-
-
-if __name__ == '__main__':
-    # create shapes collections
-    shapes = ShapeCollection()
-    # add shapes
-    shapes.add_shape(Square('square', 5))
-    shapes.add_shape(Rectangle('rectangle', 2, 3))
-    shapes.add_shape(Triangle('triangle', 3, 4, 5))
-    shapes.add_shape(Circle('circle', 5))
-    shapes.add_shape(Pentagon('pentagon', 5))
-    # display shapes info
-    print('Shapes info:')
-    shapes.display_shapes_info()
-    # display total perimeter
-    print(f'Total perimeter: {shapes.total_perimeter()}')
-    # remove a shape
-    shapes.remove_shape(shapes.shapes[0])
-    # display shapes info
-    print('Shapes info:')
-    shapes.display_shapes_info()
+    pass
