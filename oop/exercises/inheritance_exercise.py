@@ -1,4 +1,4 @@
-"""
+""""
 Мета: нам потрібно мати 3 класи: Manager, TeamLead, Developer
 
 Клас Manager повинен мати такі методи та атрибути:
@@ -21,4 +21,4 @@
 Назви класів: Manager, TeamLead, Developer
 назви методів: __init__, display_info, manage_team, plan_projects, perform_tasks
 назви атрибутів: name, salary, team_size, projects, tasks
-"""
+"""""

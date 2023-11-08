@@ -1,3 +1,5 @@
 __pycache__
 .idea/
-oop/inheritance/exercises/exercise_1_solution.py
+oop/exercises/inheritance_solution.py
+oop/exercises/comosition_over_inheritance_solution.py
+oop/exercises/polymorphism_solution.py

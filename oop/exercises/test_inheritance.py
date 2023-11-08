@@ -1,5 +1,3 @@
-from unittest import TestCase
-
 import pytest
 
 class_names = ['Manager', 'TeamLead', 'Developer']
@@ -7,13 +5,13 @@ skip_tests = {class_name: False for class_name in class_names}
 
 for class_name in class_names:
     try:
-        exec(f"from oop.inheritance.exercises.exercise_1 import {class_name}")
+        exec(f"from oop.exercises.inheritance_exercise import {class_name}")
     except ImportError:
         skip_tests[class_name] = True
 
 
 @pytest.mark.skipif(skip_tests['Manager'], reason="Manager class is not implemented")
-class TestManager(TestCase):
+class TestManager:
     def test_manager_inheritance(self):
         manager = Manager("Alice Manager", 80000.0, 10)  # type: ignore
         assert manager.__class__.__bases__[0].__name__ == "Employee"
@@ -32,7 +30,7 @@ class TestManager(TestCase):
 
 
 @pytest.mark.skipif(skip_tests['TeamLead'], reason="TeamLead class is not implemented")
-class TestTeamLead(TestCase):
+class TestTeamLead:
     def test_team_lead_inheritance(self):
         team_lead = TeamLead("Charlie Lead", 100000.0, 15, ["Project A", "Project B"])  # type: ignore
         assert team_lead.__class__.__bases__[0].__name__ == "Manager"
@@ -52,7 +50,7 @@ class TestTeamLead(TestCase):
 
 
 @pytest.mark.skipif(skip_tests['Developer'], reason="Developer class is not implemented")
-class TestDeveloper(TestCase):
+class TestDeveloper:
     def test_developer_inheritance(self):
         developer = Developer("Bob Worker", 50000.0, ["Task 1", "Task 2"])  # type: ignore
         assert developer.__class__.__bases__[0].__name__ == "Employee"

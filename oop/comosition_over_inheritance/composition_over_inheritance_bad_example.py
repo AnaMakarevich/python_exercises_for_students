@@ -6,18 +6,18 @@ class Shape(ABC):
         self.name = name
 
     @abstractmethod
-    def area(self):
-        raise NotImplementedError('This area method is not implemented')
-
-    @abstractmethod
     def perimeter(self):
-        raise NotImplementedError('This perimeter method is not implemented')
+        pass
 
     def __str__(self):
-        return f'{self.name} with area: {self.area()} and perimeter: {self.perimeter()}'
+        return f'{self.name} with perimeter: {self.perimeter()}'
 
     def __repr__(self):
         return f'{self.__class__.__name__}({self.name})'
+
+    @abstractmethod
+    def render(self):
+        pass
 
 
 class Square(Shape):
@@ -25,11 +25,11 @@ class Square(Shape):
         super().__init__(name)
         self.side = side
 
-    def area(self):
-        return self.side ** 2
-
     def perimeter(self):
         return self.side * 4
+
+    def render(self):
+        print(f"Rendering square with color")
 
 
 class Rectangle(Shape):
@@ -38,11 +38,11 @@ class Rectangle(Shape):
         self.width = width
         self.height = height
 
-    def area(self):
-        return self.width * self.height
-
     def perimeter(self):
         return (self.width + self.height) * 2
+
+    def render(self):
+        print(f"Rendering rectangle with a shadow effect")
 
 
 class Triangle(Shape):
@@ -52,26 +52,29 @@ class Triangle(Shape):
         self.side2 = side2
         self.side3 = side3
 
-    def area(self):
-        # compute the area of the triangle using Heron's formula
-        s = (self.side1 + self.side2 + self.side3) / 2
-        return (s * (s - self.side1) * (s - self.side2) * (s - self.side3)) ** 0.5
-
     def perimeter(self):
         return self.side1 + self.side2 + self.side3
 
+    def render(self):
+        print(f"Rendering triangle with a gradient effect")
 
-def show_all_objects():
-    shapes = [Square('square', 5),
-              Rectangle('rectangle', 2, 3),
-              Triangle('triangle', 3, 4, 5)]
+
+class ShadowedSquare(Square):
+    def __init__(self, name, side):
+        super().__init__(name, side)
+
+    def render(self):
+        print(f"Rendering square with a shadow effect")
+
+
+shapes = [Square('square', 5),
+          Rectangle('rectangle', 2, 3),
+          Triangle('triangle', 3, 4, 5),
+          ShadowedSquare('shadowed square', 4)]
+
+if __name__ == '__main__':
     for shape in shapes:
         print(shape)
         print(repr(shape))
+        shape.render()
         print('\n')
-
-
-if __name__ == '__main__':
-    show_all_objects()
-    # this will raise an error because we cannot instantiate an abstract class
-    # abstract_shape = Shape('shape')
