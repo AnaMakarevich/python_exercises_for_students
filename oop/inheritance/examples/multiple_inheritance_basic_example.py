@@ -26,10 +26,14 @@ class C2(B, A):
 
 if __name__ == '__main__':
     A()
+    print(A.__mro__)
     print('\n')
     B()
+    print(B.__mro__)
     print('\n')
     C1()
+    print(C1.__mro__)
     print('\n')
     C2()
     print('\n')
+    print(C2.__mro__)
