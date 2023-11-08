@@ -1,3 +1,18 @@
+"""""
+У вас є колекція різних фігур, включаючи квадрати, прямокутники та трикутники.
+Кожна фігура має спільні характеристики, успадковані від базового класу Shape.
+
+
+1. Створіть дві нові фігури: Circle та Pentagon. Переконайтеся, що кожен клас форми є похідним від базового класу Shape.
+
+2. Реалізуйте колекцію фігур, яка зберігає ці об’єкти. Колекція повинна мати можливість обробляти різні форми. The
+клас повинен мати методи для додавання фігур до колекції та відображення інформації про кожну фігуру в колекції.
+
+3. Створіть приклад використання для класу `ShapeCollection`. Приклад має продемонструвати, що колекція може обробляти
+різні форми.
+"""""
+
+
 class Shape:
     def __init__(self, name):
         self.name = name
@@ -56,18 +71,18 @@ class Triangle(Shape):
         return self.side1 + self.side2 + self.side3
 
 
-# TODO: create a new class called Circle that inherits from Shape
+# TODO: створити новий клас під назвою Circle, який успадковує Shape
 
-# TODO: create a new class called Pentagon that inherits from Shape
+# TODO: створити новий клас під назвою Pentagon, який успадковує Shape
 
-# TODO: create a new class called ShapeCollection that stores shapes in a list
-# Add the following attributes:
-# - shapes: a list of shapes
-# Add the following methods:
-# - add_shape(shape): adds a shape to the collection
-# - remove_shape(shape): removes a shape from the collection
-# - total_perimeter(): returns the total perimeter of all shapes in the collection
-# - display_shapes_info(): displays information about each shape in the collection
+# TODO: створити новий клас під назвою ShapeCollection, який зберігає фігури у списку
+# Додайте такі атрибути::
+# - shapes: список форм
+# Додайте такі методи:
+# - add_shape(shape): додає форму до колекції
+# - remove_shape(shape): видаляє форму з колекції
+# - total_perimeter(): повертає загальний периметр усіх фігур у колекції
+# - display_shapes_info(): відображає інформацію про кожну форму в колекції
 
 
 class ShapeCollection:
