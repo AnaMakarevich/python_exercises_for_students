@@ -2,5 +2,4 @@ __pycache__
 .idea/
 oop/exercises/inheritance_solution.py
 oop/exercises/comosition_over_inheritance_solution.py
-oop/exercises/polymorphism_solution.py
 knowledge_check

@@ -1,9 +1,12 @@
 # This is an example of polymorphism shown on the example of Shape class and it's child classess
+from abc import abstractmethod
+
 
 class Shape:
     def __init__(self, name):
         self.name = name
 
+    @abstractmethod
     def area(self):
         raise NotImplementedError('This area method is not implemented')
 
@@ -24,9 +27,6 @@ class Square(Shape):
 
     def area(self):
         return self.side ** 2
-
-    def perimeter(self):
-        return self.side * 4
 
 
 class Rectangle(Shape):
@@ -70,7 +70,4 @@ def show_all_objects():
 
 if __name__ == '__main__':
     show_all_objects()
-    # this will raise an error - try to guess why!
-    # abstract_shape = Shape('shape')
-    # print(abstract_shape)
 

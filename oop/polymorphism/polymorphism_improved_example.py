@@ -7,11 +7,11 @@ class Shape(ABC):
 
     @abstractmethod
     def area(self):
-        raise NotImplementedError('This area method is not implemented')
+        pass
 
     @abstractmethod
     def perimeter(self):
-        raise NotImplementedError('This perimeter method is not implemented')
+        pass
 
     def __str__(self):
         return f'{self.name} with area: {self.area()} and perimeter: {self.perimeter()}'
@@ -74,4 +74,4 @@ def show_all_objects():
 if __name__ == '__main__':
     show_all_objects()
     # this will raise an error because we cannot instantiate an abstract class
-    # abstract_shape = Shape('shape')
+    abstract_shape = Shape('shape')
