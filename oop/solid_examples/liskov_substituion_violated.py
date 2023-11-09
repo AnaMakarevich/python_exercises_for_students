@@ -1,31 +1,24 @@
-class Shape:
-    def area(self):
+class Bird:
+    def fly(self):
         pass
 
 
-class Rectangle(Shape):
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
-
-    def area(self):
-        return self.width * self.height
+class Nightingale(Bird):
+    def fly(self):
+        print("Nightingale flying")
 
 
-class Square(Rectangle):
-    def __init__(self, side):
-        # Inheriting from Rectangle but violating LSP
-        super().__init__(side, side)
+class Penguin(Bird):
+    # Penguin is a bird that cannot fly
+    def fly(self):
+        raise NotImplementedError("Penguin cannot fly")
 
 
-# Function expecting a Shape and calculating area
-def calculate_area(shape):
-    return shape.area()
+nightingale = Nightingale()
+penguin = Penguin()
 
+birds = [nightingale, penguin]
 
-if __name__ == '__main__':
-    rectangle = Rectangle(4, 5)
-    square = Square(4)
-
-    print(f"Rectangle Area: {calculate_area(rectangle)}")  # Output: Rectangle Area: 20
-    print(f"Square Area: {calculate_area(square)}")  # Output: Square Area: 16
+# This code will throw an error
+for birds in birds:
+    birds.fly()

@@ -1,33 +1,24 @@
-class Shape:
-    def area(self):
+class Bird:
+    def fly(self):
         pass
 
 
-class Rectangle(Shape):
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
-
-    def area(self):
-        return self.width * self.height
+class Nightingale(Bird):
+    def fly(self):
+        print("Nightingale flying")
 
 
-class Square(Shape):
-    def __init__(self, side):
-        self.side = side
-
-    def area(self):
-        return self.side ** 2
+class Penguin(Bird):
+    def fly(self):
+        # some meaningful implementation of the fly
+        print("Penguin swimming, not flying")
 
 
-# Function expecting a Shape and calculating area
-def calculate_area(shape):
-    return shape.area()
+nightingale = Nightingale()
+penguin = Penguin()
 
+birds = [nightingale, penguin]
 
-if __name__ == '__main__':
-    rectangle = Rectangle(4, 5)
-    square = Square(4)
-
-    print(f"Rectangle Area: {calculate_area(rectangle)}")  # Output: Rectangle Area: 20
-    print(f"Square Area: {calculate_area(square)}")  # Output: Square Area: 16
+# This code will not throw an error, and each bird will execute its own fly method
+for bird in birds:
+    bird.fly()
