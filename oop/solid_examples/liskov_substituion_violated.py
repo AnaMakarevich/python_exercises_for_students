@@ -1,24 +1,32 @@
-class Bird:
-    def fly(self):
-        pass
+# Example is taken from: https://realpython.com/inheritance-composition-python/
+
+class Rectangle:
+    def __init__(self, length, height):
+        self._length = length
+        self._height = height
+
+    @property
+    def area(self):
+        return self._length * self._height
+
+    def resize(self, new_length, new_height):
+        self._length = new_length
+        self._height = new_height
 
 
-class Nightingale(Bird):
-    def fly(self):
-        print("Nightingale flying")
+class Square(Rectangle):
+    def __init__(self, side_size):
+        super().__init__(side_size, side_size)
 
 
-class Penguin(Bird):
-    # Penguin is a bird that cannot fly
-    def fly(self):
-        raise NotImplementedError("Penguin cannot fly")
+rectangle = Rectangle(2, 4)
+assert rectangle.area == 8
 
+square = Square(2)
+assert square.area == 4
 
-nightingale = Nightingale()
-penguin = Penguin()
+rectangle.resize(3, 5)
+assert rectangle.area == 15
 
-birds = [nightingale, penguin]
-
-# This code will throw an error
-for birds in birds:
-    birds.fly()
+square.resize(3, 5)
+print(f'Square area: {square.area}')

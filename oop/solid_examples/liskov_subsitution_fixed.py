@@ -1,24 +1,30 @@
-class Bird:
-    def fly(self):
+from abc import abstractmethod
+
+
+class Shape:
+    @abstractmethod
+    def area(self):
         pass
 
 
-class Nightingale(Bird):
-    def fly(self):
-        print("Nightingale flying")
+class Rectangle(Shape):
+    def __init__(self, length, height):
+        self._length = length
+        self._height = height
+
+    @property
+    def area(self):
+        return self._length * self._height
+
+    def resize(self, new_length, new_height):
+        self._length = new_length
+        self._height = new_height
 
 
-class Penguin(Bird):
-    def fly(self):
-        # some meaningful implementation of the fly
-        print("Penguin swimming, not flying")
+class Square(Rectangle):
+    def __init__(self, side_size):
+        super().__init__(side_size, side_size)
 
-
-nightingale = Nightingale()
-penguin = Penguin()
-
-birds = [nightingale, penguin]
-
-# This code will not throw an error, and each bird will execute its own fly method
-for bird in birds:
-    bird.fly()
+    def resize(self, new_length, new_height=None):
+        # Preserve the square nature by setting both length and height to the new size
+        super().resize(new_length, new_length)
