@@ -1,4 +1,12 @@
 # Example is taken from: https://realpython.com/inheritance-composition-python/
+from abc import abstractmethod
+
+
+class Shape:
+    @abstractmethod
+    def area(self):
+        pass
+
 
 class Rectangle:
     def __init__(self, length, height):
