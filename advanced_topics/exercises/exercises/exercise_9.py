@@ -11,7 +11,6 @@ def measure_time(func):
     raise NotImplementedError
 
 
-
 @measure_time
 def slow_function():
     time.sleep(2)
