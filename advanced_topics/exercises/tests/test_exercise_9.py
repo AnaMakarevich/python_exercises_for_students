@@ -1,4 +1,4 @@
-from advanced_topics.exercises.solutions.exercise_9 import slow_function, fast_function
+from advanced_topics.exercises.exercises.exercise_9 import slow_function, fast_function
 
 
 class TestTimeDecorator:

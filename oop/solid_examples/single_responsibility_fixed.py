@@ -4,7 +4,8 @@ class ReportGenerator:
 
 
 class ReportSaver:
-    def save_to_file(self, data):
+    @staticmethod
+    def save_to_file(data):
         with open("report.txt", "w") as file:
             file.write(f"Report: {data}")
 

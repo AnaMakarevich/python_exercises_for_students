@@ -1,6 +1,6 @@
 import time
 
-from advanced_topics.exercises.solutions.exercise_10 import Timer
+from advanced_topics.exercises.exercises.exercise_10 import Timer
 
 
 def test_timer_output(capsys):
