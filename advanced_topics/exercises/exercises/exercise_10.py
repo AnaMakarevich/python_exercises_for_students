@@ -8,11 +8,11 @@ The timer should print the time in seconds.
 import time
 
 
-class Timer:
+class MyTimer:
     # TODO: Implement the Timer context manager
     raise NotImplementedError
 
 
 # Use the Timer context manager to measure the time taken to execute the code within the context
-with Timer():
+with MyTimer():
     time.sleep(2)
