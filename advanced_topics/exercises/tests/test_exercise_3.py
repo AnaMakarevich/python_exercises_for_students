@@ -1,10 +1,7 @@
-import pytest
-
 from advanced_topics.exercises.exercises.exercise_3 import count_keywords
 from advanced_topics.exercises.tests.utils import skip_if_not_implemented
 
 
-@pytest.mark.skipif(condition=True, reason="Method not implemented")
 class TestCountKeywords:
     @skip_if_not_implemented
     def test_basic_keyword_counting(self):

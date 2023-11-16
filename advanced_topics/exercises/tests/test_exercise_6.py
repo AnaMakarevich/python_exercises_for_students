@@ -1,10 +1,6 @@
-import pytest
-
 from advanced_topics.exercises.exercises.exercise_6 import Configuration
 from advanced_topics.exercises.tests.utils import skip_if_not_implemented
 
-
-@pytest.mark.skipif(condition=True, reason="Method not implemented")
 class TestConfiguration:
     @skip_if_not_implemented
     def test_basic_usage(self):

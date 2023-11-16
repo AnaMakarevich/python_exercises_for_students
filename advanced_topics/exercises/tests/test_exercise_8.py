@@ -1,10 +1,7 @@
-import pytest
-
 from advanced_topics.exercises.exercises.exercise_8 import SimpleContainer
 from advanced_topics.exercises.tests.utils import skip_if_not_implemented
 
 
-@pytest.mark.skipif(condition=True, reason="Method not implemented")
 class TestSimpleContainer:
     @staticmethod
     def __get_basic_container():

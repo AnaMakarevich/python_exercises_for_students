@@ -6,7 +6,6 @@ from advanced_topics.exercises.exercises.exercise_2 import calculate_average
 from advanced_topics.exercises.tests.utils import skip_if_not_implemented
 
 
-@pytest.mark.skipif(condition=True, reason="Method not implemented")
 class TestCalculateAverage(TestCase):
     @skip_if_not_implemented
     def test_calculate_average_of_integers(self):

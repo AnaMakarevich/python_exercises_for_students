@@ -1,12 +1,9 @@
 import string
 
-import pytest
-
 from advanced_topics.exercises.exercises.exercise_7 import password_generator
 from advanced_topics.exercises.tests.utils import skip_if_not_implemented
 
 
-@pytest.mark.skipif(condition=True, reason="Method not implemented")
 class TestPasswordGenerator:
     @skip_if_not_implemented
     def test_password_generator_12_letters(self):

@@ -4,7 +4,6 @@ from advanced_topics.exercises.exercises.exercise_1 import calculate
 from advanced_topics.exercises.tests.utils import skip_if_not_implemented
 
 
-@pytest.mark.skipif(condition=True, reason="Method not implemented")
 class TestCalculate:
     @skip_if_not_implemented
     def test_sum_and_product_of_integers(self):

@@ -4,7 +4,6 @@ from advanced_topics.exercises.exercises.exercise_5 import ComplexNumber
 from advanced_topics.exercises.tests.utils import skip_if_not_implemented
 
 
-@pytest.mark.skipif(condition=True, reason="Method not implemented")
 class TestComplexNumber:
     @skip_if_not_implemented
     def test_complex_number_attributes(self):
