@@ -6,6 +6,9 @@ For example, 1 can be both in lst1 and lst2. Both occurrences should be in the f
 Example:
     >>> merge_sorted_lists([1, 2, 3], [1, 4, 5])
     [1, 1, 2, 3, 4, 5]
+
+HINT: Look for built-in methods
+BONUS: Implement the same with loops
 """
 from pathlib import Path
 

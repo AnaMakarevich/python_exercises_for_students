@@ -7,6 +7,9 @@ in the list. Make sure to test your function with different lists.
 Example:
     >>> count_occurrences([1,2,3,3,5,4], 3)
     2
+
+HINT: Search for built-in methods of lists!
+BONUS: Implement the same with a loop
 """
 from basic_data_structures.class_exercises.utils import test_my_solution
 from pathlib import Path

@@ -6,6 +6,9 @@ list with the elements reversed.
 Example:
     >>> reverse_list([1, 2, 3])
     [3, 2, 1]
+
+HINT: Use slicing syntax
+BONUS: Implement the same with loops
 """
 from pathlib import Path
 
