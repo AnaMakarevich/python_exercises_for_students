@@ -15,7 +15,7 @@ from basic_data_structures.class_exercises.utils import test_my_solution
 from pathlib import Path
 def count_occurrences(lst: list[int], element: int) -> int:
     """This is a stub"""
-    raise 0
+    return 0
 
 
 if __name__ == '__main__':
